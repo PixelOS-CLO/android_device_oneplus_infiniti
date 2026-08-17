@@ -33,6 +33,7 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
         'libhcsutils',
+        'vendor.qti.hardware.vpp-V1-ndk',
     ): lib_fixup_vendor_suffix,
 }
 
