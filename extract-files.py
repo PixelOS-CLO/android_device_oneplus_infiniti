@@ -70,6 +70,19 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_unlock'),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    'odm/lib64/libdisplayadfr2minfps_qcom.so': blob_fixup()
+        # OplusAdfr2minfpsService::setAdfr2MinfpsEnable()
+        # Bypass mADFRPanelNitEnable policy gate.
+        .sig_replace(
+            '07 0F 00 94 68 A6 4B B9 A8 04 00 34 68 02 40 F9 E0 03 13 AA',
+            '07 0F 00 94 68 A6 4B B9 1F 20 03 D5 68 02 40 F9 E0 03 13 AA',
+        )
+        # OplusAdfr2minfpsService::setAdfrPowerMode()
+        # Allow min-FPS recalculation after panel resume.
+        .sig_replace(
+            'E3 03 00 54 68 A6 4B B9 A8 03 00 34 68 02 40 F9 E0 03 13 AA',
+            'E3 03 00 54 68 A6 4B B9 1F 20 03 D5 68 02 40 F9 E0 03 13 AA',
+        ),
     'odm/lib64/liboprec_audrec.so': blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
