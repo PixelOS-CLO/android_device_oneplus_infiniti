@@ -46,9 +46,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.oplus
 
-# Recovery
-$(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
-
 # Regional properties
 REGIONAL_PROP_FILES := $(wildcard $(LOCAL_PATH)/properties/*/*.prop)
 
