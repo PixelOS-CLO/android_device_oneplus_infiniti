@@ -1,3 +1,8 @@
+# Display
+ro.vendor.oplus.display.cwb.display_id=0
+vendor.manualbrightness_ltm_disable=1
+vendor.oplus.display.global.dre_status=1
+
 # Regional properties
 import /odm/etc/${ro.boot.prjname}/build.default.prop
 ro.product.property_source_order=odm,vendor,product,system_ext,system
@@ -6,4 +11,12 @@ ro.product.property_source_order=odm,vendor,product,system_ext,system
 ro.vendor.oplus.sensor.brl_receive=true
 ro.vendor.oplus.sensor.high_pwm_rgb=true
 ro.vendor.oplus.sensor.lb_algo=true
+ro.vendor.oplus.sensor.rect.bottom=137
+ro.vendor.oplus.sensor.rect.left=732
+ro.vendor.oplus.sensor.rect.right=770
+ro.vendor.oplus.sensor.rect.top=100
 ro.vendor.oplus.sensor.use_black_mode=true
+
+# Strongbox
+ro.strongbox.manufacturer=NXP
+ro.strongbox.model=SN220
