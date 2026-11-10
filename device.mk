@@ -76,6 +76,7 @@ $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,HTPR_ENABLE_VALUE,14)
 
 # Vibrator
 PRODUCT_PACKAGES += \
+    vendor.aac.hardware.richtap.vibrator-service.oplus-livetap \
     vendor.qti.hardware.vibrator.service
 
 $(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)

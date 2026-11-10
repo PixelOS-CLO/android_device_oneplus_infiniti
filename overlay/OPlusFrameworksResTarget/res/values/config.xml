@@ -297,4 +297,7 @@
          booted.  -->
     <integer name="config_stableDeviceDisplayWidth">1272</integer>
     <integer name="config_stableDeviceDisplayHeight">2772</integer>
+
+    <!-- Whether the device has a RichTap vibrator HAL for apps using the RichTap SDK. -->
+    <bool name="config_richtapSupported">true</bool>
 </resources>
